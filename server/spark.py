@@ -1,3 +1,10 @@
+import os
+import sys
+
+SPARK_HOME = '/usr/lib/spark'
+os.environ['SPARK_HOME'] = SPARK_HOME
+sys.path.append(SPARK_HOME + '/python')
+
 from pyspark.sql import SparkSession
 from pyspark.sql import HiveContext
 import requests
