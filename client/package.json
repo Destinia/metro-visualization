@@ -88,6 +88,7 @@
     "babel-polyfill": "^6.0.16",
     "babel-runtime": "^6.11.6",
     "classnames": "^2.2.5",
+    "csv-parse": "^1.2.0",
     "echarts-for-react": "https://github.com/Destinia/echarts-for-react.git",
     "firebase": "^3.4.1",
     "google-map-react": "^0.22.3",

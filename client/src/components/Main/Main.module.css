@@ -1,7 +1,6 @@
 .main {
   flex: 1;
   order: 2;
-  padding-top: 65px;
   border-left: 1px solid #CBCBCB;
   
 }
@@ -15,7 +14,7 @@
 
 .mapContainer {
   width: 100%;
-  height: calc(100vh - 65px);
+  height: 100%;
 }
 
 .table {

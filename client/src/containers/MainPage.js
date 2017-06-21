@@ -1,17 +1,15 @@
-import Main from '../components/Main';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import asyncProps from 'async-update-props';
 
-import * as PredictionActions from '../actions/prediction';
+import Main from '../components/Main';
 
-const mapStateToProps = state => ({
-  prediction: state.prediction,
+const mapStateToProps = () => ({
+
 });
 
 
 export default compose(
-  connect(mapStateToProps, { ...PredictionActions }),
+  connect(mapStateToProps),
 )(Main);
 
 

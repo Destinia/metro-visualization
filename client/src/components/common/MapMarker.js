@@ -1,14 +1,13 @@
 import React, { PropTypes } from 'react';
 import styles from './MapMarker.module.css';
 
+import subway from './subway.png';
 
-const MapMarker = ({ onClick, color }) => (
-  <i className={`fa fa-map-marker ${styles.marker}`} aria-hidden="true" onClick={onClick} style={{color}} />
+const MapMarker = () => (
+  <img src={subway} className={`${styles.marker}`} role="presentation" />
 );
 
 MapMarker.propTypes = {
-  onClick: PropTypes.func,
-  color: PropTypes.string,
 };
 
 export default MapMarker;

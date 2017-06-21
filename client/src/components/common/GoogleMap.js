@@ -16,10 +16,10 @@ const GoogleMap = (props) => (
 
 GoogleMap.defaultProps = {
   center: {
-    lat: 25.018680,
-    lng: 121.542029,
+    lat: 25.0499048,
+    lng: 121.5139508,
   },
-  zoom: 12,
+  zoom: 14,
 };
 
 GoogleMap.propTypes = {
