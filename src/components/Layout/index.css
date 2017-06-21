@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+html {
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.layout {
+  display: flex;
+  background-color: #ECECEC;
+  height: 100vh;
+}

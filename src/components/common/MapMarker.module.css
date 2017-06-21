@@ -1,0 +1,10 @@
+$height: 46px;
+$width: 28.56px;
+
+.marker {
+  position: absolute;
+  font-size: 2px;
+  color: red;
+  left: calc(-$width / 2);
+  top: calc(-$height);
+}

@@ -1,0 +1,65 @@
+.main {
+  flex: 1;
+  order: 2;
+  padding-top: 65px;
+  border-left: 1px solid #CBCBCB;
+  
+}
+
+.subHeader {
+  position: fixed;
+  width: calc(100% - 225px);
+  z-index: 1;
+}
+
+
+.mapContainer {
+  width: 100%;
+  height: calc(100vh - 65px);
+}
+
+.table {
+  padding: 20px;
+}
+
+.barChart {
+  padding-top: 105px;
+  margin: 30px;
+  margin-top: 0;
+}
+
+.barChartLoading {
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  text-align: center;
+}
+
+.loading {
+  animation: rotate 0.75s linear infinite;
+  height: 30px;
+  width: 30px;
+  border: 5px solid #000;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.buttonContainer {
+  
+  button {
+    margin: 10px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

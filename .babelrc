@@ -1,0 +1,39 @@
+{
+  "presets": ["react", "es2015", "stage-0", "flow"],
+  "env": {
+    "production": {
+      "plugins": [
+        "dev-expression",
+        ["transform-runtime",
+        {
+          "polyfill": false,
+          "regenerator": true
+        }],
+        "transform-decorators-legacy"
+      ]
+    },
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel",
+        ["transform-runtime",
+        {
+          "polyfill": false,
+          "regenerator": true
+        }],
+        "transform-decorators-legacy"
+      ]
+    },
+    "test": {
+      "plugins": [
+        [
+          "webpack-loaders",
+          {
+            "config": "./webpack.config.test.js",
+            "verbose": false
+          }
+        ],
+        "transform-decorators-legacy"
+      ]
+    }
+  }
+}
