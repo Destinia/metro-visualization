@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import ReactGoogleMap from 'google-map-react';
 
+import mapStyle from './MyMapStyle';
+
 const GoogleMap = (props) => (
   <ReactGoogleMap
     {...props}
@@ -9,6 +11,9 @@ const GoogleMap = (props) => (
       language: 'zh-tw',
     }}
     yesIWantToUseGoogleMapApiInternals
+    options={{
+      styles: mapStyle,
+    }}
   >
     {props.children}
   </ReactGoogleMap>
