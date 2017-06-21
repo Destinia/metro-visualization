@@ -16,7 +16,7 @@ const queryLine = (station, destination) => {
 };
 
 const queryLocation = (startStation, destination, updateTime) => {
-  let timeInterval = moment().unix() - moment('2017-06-22T01:40:56+08:00').unix();
+  let timeInterval = moment().unix() - moment(updateTime).unix();
   const line = queryLine(startStation, destination);
   if (!line) {
     return [];
