@@ -1,5 +1,15 @@
-$height: 16px;
-$width: 16px;
+$height: 24px;
+$width: 24px;
+
+.time {
+  position: absolute;
+  color: red;
+  width: $width;
+  text-align: center;
+  top: calc(-$width * 3 / 2);
+  left: calc(-$height / 2);
+  font-size: 16px;
+}
 
 .marker {
   position: absolute;

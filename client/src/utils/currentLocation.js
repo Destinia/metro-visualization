@@ -34,7 +34,8 @@ const queryLocation = (startStation, destination, updateTime) => {
       const intervalRatio = timeInterval / tripTime;
       const curLine = geoStations[curStation + nextStation];
       if (!curLine) {
-        console.error(curStation, nextStation, line);
+        console.error('line not found', curStation, nextStation, line);
+        return [];
       }
       const stationRatio = (curLine.length - 1) * intervalRatio;
       const extendRatio = stationRatio - Math.floor(stationRatio);
@@ -42,12 +43,12 @@ const queryLocation = (startStation, destination, updateTime) => {
       const endPoint = curLine[Math.ceil(stationRatio)];
       const curLocation = [startPoint[0] + ((endPoint[0] - startPoint[0]) * extendRatio),
         startPoint[1] + ((endPoint[1] - startPoint[1]) * extendRatio)];
-      return curLocation;
+      return [...curLocation, tripTime - timeInterval];
     }
-    return geoStations[curStation + nextStation][0];
+    return [...geoStations[curStation + nextStation][0], 0];
   }
   const destSeg = geoStations[line[line.length - 2] + curStation];
-  return destSeg[destSeg.length - 1]; // return destination
+  return [...destSeg[destSeg.length - 1], 0]; // return destination
 };
 
 export default queryLocation;

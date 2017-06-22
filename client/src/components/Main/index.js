@@ -42,8 +42,7 @@ class Main extends Component {
         el.Station.slice(0, -1),
         el.Destination.slice(0, -1),
         el.UpdateTime
-      ), el._id]).filter(m => m);
-
+      ), el._id]).filter(m => m.length === 4);
     this.setState({
       metros,
     });
@@ -66,7 +65,8 @@ class Main extends Component {
     return (<MapMarker
       lat={el[1]}
       lng={el[0]}
-      key={el[2]}
+      time={el[2]}
+      key={el[3]}
     />);
   }
 
