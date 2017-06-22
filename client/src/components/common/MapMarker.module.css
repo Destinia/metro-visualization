@@ -6,9 +6,9 @@ $width: 24px;
   color: red;
   width: $width;
   text-align: center;
-  top: calc(-$width * 3 / 2);
-  left: calc(-$height / 2);
-  font-size: 16px;
+  top: calc(-$height);
+  left: calc(-$width);
+  font-size: 12px;
 }
 
 .marker {
