@@ -37,12 +37,13 @@ class Main extends Component {
   tick = () => {
     const data = isLoaded(this.props.data) ? this.props.data : [];
 
-    const metros = data.map(el =>
+    const query = data.map(el =>
       [...queryLocation(
-        el.Station.slice(0, -1),
+        el.Station.endsWith('車站') ? el.Station : el.Station.slice(0, -1),
         el.Destination.slice(0, -1),
         el.UpdateTime
-      ), el._id]).filter(m => m.length === 4);
+      ), el._id]);
+    const metros = query.filter(m => m.length === 4);
     this.setState({
       metros,
     });

@@ -19,6 +19,7 @@ const queryLocation = (startStation, destination, updateTime) => {
   let timeInterval = moment().unix() - moment(updateTime).unix();
   const line = queryLine(startStation, destination);
   if (!line) {
+    console.log('no line', line, startStation, destination);
     return [];
   }
   let curStation = startStation;
